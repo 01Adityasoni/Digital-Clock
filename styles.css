@@ -3,17 +3,69 @@ body {
     color: #0b0b0b;
 
 }
-.center{
+body {
+    min-height: 100vh;
+    margin: 0;
     display: flex;
-    height: 100vh;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    font-family: 'Orbitron', Arial, sans-serif;
+    transition: background 0.5s;
 }
-#clock{
-    font-size: 50px;
-    background-color: blanchedalmond;
-    padding: 20px 50px;
-    margin-top: 10px;
-    border-radius: 15px;
+
+#clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#clock {
+    font-size: 5rem;
+    letter-spacing: 0.15em;
+    color: #00ffe7;
+    background: rgba(20, 20, 30, 0.7);
+    padding: 40px 70px;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 255, 231, 0.25), 0 1.5px 8px 0 #00ffe7;
+    border: 2px solid #00ffe7;
+    text-shadow: 0 0 20px #00ffe7, 0 0 40px #00ffe7;
+    transition: color 0.3s, background 0.3s;
+}
+
+.controls {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.btn {
+    background: #00ffe7;
+    color: #232526;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7em 1.5em;
+    font-size: 1.1rem;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px 0 rgba(0,255,231,0.15);
+    transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+.btn:hover {
+    background: #232526;
+    color: #00ffe7;
+    transform: scale(1.07);
+}
+
+@media (max-width: 600px) {
+    #clock {
+        font-size: 2.2rem;
+        padding: 20px 10px;
+    }
+    .controls {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
 }
